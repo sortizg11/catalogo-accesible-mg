@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual de usuario del catálogo</title>
+  <style>
+    :root { color: #183326; background: #fff; font: 100%/1.65 system-ui, sans-serif; }
+    body { max-width: 72ch; margin: 0 auto; padding: clamp(1rem, 4vw, 2rem); overflow-wrap: anywhere; }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin-block: .55em; }
+    h2 { margin-block: 1.7em .5em; }
+    p, ul, ol, dl { margin-block: .5em; }
+    li + li { margin-block-start: .45em; }
+    a { color: #176038; text-decoration: underline; text-underline-offset: .15em; }
+    nav { border-block: 1px solid #83978a; padding-block: .65rem; margin-block: 1.25rem; }
+    nav a, .skip { display: inline-block; min-height: 1.5rem; padding-block: .125rem; }
+    :focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+    kbd { font: inherit; font-weight: 600; }
+    .mapa { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: .6rem; }
+    .mapa div { padding: .85rem; border: 1px solid #83978a; border-radius: .4rem; background: #edf6ef; }
+    .mapa div:first-child { grid-column: 1 / -1; background: #143e2b; color: #fff; }
+    .mapa dt { font-weight: 700; }
+    .mapa dd { margin: .25rem 0 0; }
+    @media (max-width: 40rem) { .mapa { grid-template-columns: minmax(0, 1fr); } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido del manual</a>
+  <header>
+    <h1>Manual de usuario del catálogo</h1>
+    <p>El catálogo reúne temas con teoría, ejemplos resueltos, práctica y soluciones. Puedes usarlo con teclado, ratón o lector de pantalla. Se diseñó tomando NVDA como referencia.</p>
+    <p><a href="../index.html">Abrir el catálogo de Matemática General</a></p>
+  </header>
+
+  <nav aria-label="Secciones del manual">
+    <ul>
+      <li><a href="#mapa">Mapa de la pantalla</a></li>
+      <li><a href="#temas">Tu primer recorrido</a></li>
+      <li><a href="#voz">Buscar por voz</a></li>
+      <li><a href="#retomar">Ubicarte y retomar el estudio</a></li>
+    </ul>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <section aria-labelledby="mapa">
+      <h2 id="mapa" tabindex="-1">Mapa de la pantalla</h2>
+      <dl class="mapa">
+        <div>
+          <dt>Arriba · Cabecera</dt>
+          <dd>El nombre del curso vuelve al inicio. A su lado están los controles para mostrar u ocultar el temario, abrir «Herramientas», «Buscar», «Ayuda» y «Preferencias». «Información institucional» se despliega debajo del nombre.</dd>
+        </div>
+        <div>
+          <dt>A la izquierda · Temario</dt>
+          <dd>Las unidades se despliegan al seleccionarlas. Dentro están sus temas. En pantallas estrechas, «Mostrar temario» abre esta lista en una ventana.</dd>
+        </div>
+        <div>
+          <dt>Al centro · Contenido principal</dt>
+          <dd>Al inicio están «Buscar un tema», «Continuar donde quedé» y «Explorar temas disponibles». Al abrir un tema, arriba aparece la ruta académica con la unidad y el tema. Debajo siguen el título, los enlaces a sus secciones y el contenido de estudio.</dd>
+        </div>
+      </dl>
+      <p>Con el teclado, el primer enlace del catálogo es «Saltar al contenido principal». Usa <kbd>Tab</kbd> y <kbd>Mayús + Tab</kbd> para recorrer controles, <kbd>Enter</kbd> para activarlos y <kbd>Escape</kbd> para cerrar una ventana del catálogo.</p>
+    </section>
+
+    <section aria-labelledby="temas">
+      <h2 id="temas" tabindex="-1">Tu primer recorrido</h2>
+      <ol>
+        <li>En el inicio, ve a «Buscar un tema», escribe «Círculo unitario» y pulsa «Buscar tema». Si aparece una lista, elige el enlace del tema. También puedes abrirlo desde «Unidad 4. Funciones trigonométricas» en el temario.</li>
+        <li>En el tema, selecciona «Teoría» para leer el objetivo y la explicación. Cuando se incorporen los materiales, abre «Ejemplos resueltos», elige un ejemplo en el índice y activa el título de un paso con <kbd>Enter</kbd> o <kbd>Espacio</kbd>. «Mostrar todos los pasos» despliega el procedimiento completo.</li>
+        <li>Cuando haya ejercicios disponibles, selecciona «Práctica» y elige uno. Intenta resolverlo y después activa «Ver solución», debajo del enunciado, para comparar el procedimiento. También puedes llegar a la misma respuesta desde el índice de «Soluciones».</li>
+      </ol>
+      <p>Durante la revisión del temario, las secciones cuyo material falta se indican como pendientes.</p>
+    </section>
+
+    <section aria-labelledby="voz">
+      <h2 id="voz" tabindex="-1">Buscar por voz</h2>
+      <ol>
+        <li>Activa «Iniciar búsqueda por voz» en el inicio o dentro de «Buscar» en la cabecera. Autoriza el micrófono si el navegador lo solicita.</li>
+        <li>Espera el aviso «Escuchando», di el nombre del tema y haz una pausa.</li>
+        <li>Revisa el texto reconocido y abre el enlace del resultado. Si hace falta, corrige el texto en el campo y pulsa «Buscar tema».</li>
+      </ol>
+      <p>«Cancelar escucha» detiene el dictado. Si el micrófono o el servicio de voz no está disponible, usa el mismo campo para escribir la consulta. El navegador puede procesar el audio mediante su proveedor de reconocimiento.</p>
+    </section>
+
+    <section aria-labelledby="retomar">
+      <h2 id="retomar" tabindex="-1">Ubicarte y retomar el estudio</h2>
+      <ol>
+        <li>Abre «Herramientas» y elige «¿Dónde estoy?». El catálogo indica la última ubicación seleccionada o enfocada. «Volver a esta ubicación» te lleva a ese punto.</li>
+        <li>En un paso desplegado, selecciona «Guardar este paso como punto de estudio» y cierra la confirmación. En el inicio, pulsa «Continuar donde quedé» para regresar al paso. El punto se conserva en el mismo navegador si el almacenamiento está disponible.</li>
+        <li>Para ajustar la lectura, abre «Preferencias» y elige el tamaño de fuente, el alto contraste o la lectura completa de los procedimientos.</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

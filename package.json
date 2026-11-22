@@ -1,0 +1,14 @@
+{
+  "name": "catalogo-accesible-mg",
+  "version": "2.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/structure.test.js",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
