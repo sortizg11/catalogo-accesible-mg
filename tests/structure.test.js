@@ -31,20 +31,15 @@ test('todas las fichas y controles tienen destinos únicos', () => {
     for (const section of Object.keys(sections)) assert.ok(unique.has(`${topic.id}--${section}`));
   }
   assert.equal(topics.length, 53);
-  assert.equal(topics.filter(topic => topic.pending).length, 53);
+  assert.equal(topics.filter(topic => topic.pending).length, 52);
 });
 
-test('los procedimientos y soluciones se pueden incorporar a una ficha', () => {
-  const item = {
-    sourceId: 'prueba', title: 'Ejercicio de prueba', statement: '<p>Enunciado</p>',
-    analysis: '', steps: [{ title: 'Paso', body: '<p>Desarrollo</p>' }], answer: '<p>Resultado</p>', notes: ''
-  };
-  const html = renderTopic({
-    ...topics[0], pending: false, objective: 'Objetivo de prueba', readiness: 'Conocimientos previos',
-    theory: '<p>Teoría</p>', examples: [item], exercises: [item]
-  });
+test('la lección de muestra tiene MathML, pasos y solución desplegable', () => {
+  const html = renderTopic(topics[0]);
+  assert.equal(topics[0].pending, false);
+  assert.match(html, /<math>/);
   assert.match(html, /class="step"/);
   assert.match(html, /class="exercise-solution"/);
-  assert.match(html, /id="conceptos-basicos--solucion-prueba--paso-1"/);
-  assert.match(html, /href="#conceptos-basicos--solucion-prueba"/);
+  assert.match(html, /id="conceptos-basicos--solucion-muestra-relacion--paso-1"/);
+  assert.match(html, /href="#conceptos-basicos--solucion-muestra-relacion"/);
 });

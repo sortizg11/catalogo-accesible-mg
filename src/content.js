@@ -11,7 +11,49 @@ export const sections = {
 
 // Cada ficha se completa aquí al incorporar su material revisado.
 export const topics = [
-  {"id": "conceptos-basicos", "unit": "Unidad 1. Funciones", "number": "1.1", "title": "Conceptos básicos de funciones", "description": "Producto cartesiano, pares ordenados, relaciones, funciones, dominio, codominio, gráfico y gráfica."},
+  {
+    id: 'conceptos-basicos',
+    unit: 'Unidad 1. Funciones',
+    number: '1.1',
+    title: 'Conceptos básicos de funciones',
+    description: 'Lección de muestra. Distingue una relación de una función e identifica su dominio, codominio y gráfico.',
+    pending: false,
+    objective: 'Determinar si una relación dada por pares ordenados define una función entre dos conjuntos.',
+    readiness: 'Reconocer elementos de un conjunto y distinguir la primera y la segunda componente de un par ordenado.',
+    theory: `
+      <h3>Pares ordenados, producto cartesiano y relaciones</h3>
+      <p>En un par ordenado, la primera componente indica la entrada y la segunda indica el valor asociado. El producto cartesiano <math><mi>A</mi><mo>×</mo><mi>B</mi></math> reúne todos los pares con primera componente en el conjunto A y segunda componente en el conjunto B. Una relación de A en B es un subconjunto de ese producto cartesiano.</p>
+      <h3>Cuándo una relación es una función</h3>
+      <p>Una función de A en B asigna exactamente un valor de B a cada elemento de A. A es el dominio y B es el codominio. Dos entradas distintas pueden tener la misma imagen. El gráfico es el conjunto de pares entrada e imagen. Si las componentes son números reales, podemos representar esos pares como puntos en el plano cartesiano para obtener la gráfica.</p>`,
+    examples: [
+      {
+        sourceId: 'muestra-funcion',
+        title: 'Ejemplo 1. Dos entradas con la misma imagen',
+        statement: '<p>Sea A el conjunto formado por 1 y 2, y sea B el conjunto formado por 3 y 4. Decide si la relación dada por los pares <math><mo>(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>)</mo></math> y <math><mo>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>)</mo></math> define una función de A en B.</p>',
+        analysis: '<p>Revisa cuántas imágenes recibe cada elemento del dominio.</p>',
+        steps: [
+          { title: 'Paso 1. Revisar las entradas', body: '<p>Las primeras componentes son 1 y 2. Aparecen todos los elementos de A.</p>' },
+          { title: 'Paso 2. Contar las imágenes', body: '<p>La entrada 1 tiene como imagen a 3. La entrada 2 también tiene como imagen a 3. Cada entrada tiene una sola imagen.</p>' }
+        ],
+        answer: '<p>Sí define una función. El dominio es A, el codominio es B y el gráfico está formado por los dos pares del enunciado.</p>',
+        notes: ''
+      }
+    ],
+    exercises: [
+      {
+        sourceId: 'muestra-relacion',
+        title: 'Ejercicio 1. Una entrada con dos valores asociados',
+        statement: '<p>Sea A el conjunto formado por 1 y 2, y sea B el conjunto formado por 3 y 4. Decide si los pares <math><mo>(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>)</mo></math>, <math><mo>(</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo>)</mo></math> y <math><mo>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>)</mo></math> definen una función de A en B. Justifica tu respuesta.</p>',
+        analysis: '',
+        steps: [
+          { title: 'Paso 1. Identificar los valores asociados a 1', body: '<p>La entrada 1 está asociada a 3 en el primer par y a 4 en el segundo.</p>' },
+          { title: 'Paso 2. Aplicar la definición', body: '<p>Para definir una función, cada entrada debe tener una única imagen. La entrada 1 incumple esa condición.</p>' }
+        ],
+        answer: '<p>La relación no define una función de A en B porque asigna dos valores distintos a la misma entrada.</p>',
+        notes: ''
+      }
+    ]
+  },
   {"id": "dominio-ambito", "unit": "Unidad 1. Funciones", "number": "1.2", "title": "Dominio real y ámbito de funciones", "description": "Incluye funciones racionales y radicales."},
   {"id": "representaciones", "unit": "Unidad 1. Funciones", "number": "1.3", "title": "Representaciones de funciones", "description": "Representaciones tabular, verbal, gráfica y algebraica."},
   {"id": "imagenes-preimagenes", "unit": "Unidad 1. Funciones", "number": "1.4", "title": "Imágenes, preimágenes y extremos relativos", "description": "Imágenes y preimágenes, incluidas las de funciones a trozos. Extremos relativos a partir de la gráfica."},
@@ -100,4 +142,4 @@ export function renderTopic(t){
   <section class="academic-section" data-section="soluciones"><h2 id="${t.id}--soluciones" tabindex="-1"><span class="section-number" aria-hidden="true">04</span> Soluciones</h2>${t.pending ? pendingContent : solutions(t)}</section>
   <nav class="topic-navigation" aria-label="Continuar el estudio"><a href="#${t.id}--tema">Volver al inicio del tema</a>${previous?`<a href="#${previous.id}--tema">Anterior: ${previous.title}</a>`:''}${next?`<a href="#${next.id}--tema">Siguiente: ${next.title}</a>`:''}</nav></article>`;
 }
-export const home = `<article data-view="inicio"><div class="home-hero"><p class="home-kicker">CATÁLOGO DE ESTUDIO</p><h1 id="inicio" tabindex="-1">Matemática General</h1><p class="lead">¿Qué tema quieres estudiar?</p></div><section class="home-search" aria-labelledby="home-search-title"><h2 id="home-search-title">Buscar un tema</h2><form id="home-search-form" role="search" aria-label="Buscar en el catálogo"><label for="home-search-query">Tema, apartado o ejemplo</label><div class="search-input-row"><input id="home-search-query" type="search" placeholder="Por ejemplo, círculo unitario" autocomplete="off"><button type="submit" class="primary">Buscar</button></div></form><div class="inline-actions"><button id="home-voice-start" aria-describedby="home-voice-note">Buscar por voz</button><button id="home-voice-stop" hidden>Cancelar escucha</button></div><p id="home-search-status" role="status"></p><ul id="home-search-results"></ul><details class="voice-privacy"><summary>Acerca del micrófono</summary><p id="home-voice-note">El navegador puede enviar audio a su proveedor de reconocimiento. El catálogo no guarda grabaciones ni consultas. Si el servicio no responde, escribe o usa el dictado del dispositivo en el campo de búsqueda.</p></details></section><div class="inline-actions"><button data-continue>Continuar donde quedé</button><a href="#home-topics">Explorar temas disponibles</a></div><details class="home-topics"><summary id="home-topics">Temas disponibles</summary><ol class="topic-list">${topics.map(t=>`<li><h3><a href="#${t.id}--tema">${t.number}. ${t.title}</a></h3>${t.description ? `<p>${t.description}</p>` : ''}</li>`).join('')}</ol></details><p>También puedes usar el temario por unidades. Esta versión permite revisar el temario. Los materiales de estudio se incorporarán por apartado.</p><a href="#ayuda">Ayuda para utilizar el curso</a></article>`;
+export const home = `<article data-view="inicio"><div class="home-hero"><p class="home-kicker">CATÁLOGO DE ESTUDIO</p><h1 id="inicio" tabindex="-1">Matemática General</h1><p class="lead">¿Qué tema quieres estudiar?</p></div><section class="home-search" aria-labelledby="home-search-title"><h2 id="home-search-title">Buscar un tema</h2><form id="home-search-form" role="search" aria-label="Buscar en el catálogo"><label for="home-search-query">Tema, apartado o ejemplo</label><div class="search-input-row"><input id="home-search-query" type="search" placeholder="Por ejemplo, círculo unitario" autocomplete="off"><button type="submit" class="primary">Buscar</button></div></form><div class="inline-actions"><button id="home-voice-start" aria-describedby="home-voice-note">Buscar por voz</button><button id="home-voice-stop" hidden>Cancelar escucha</button></div><p id="home-search-status" role="status"></p><ul id="home-search-results"></ul><details class="voice-privacy"><summary>Acerca del micrófono</summary><p id="home-voice-note">El navegador puede enviar audio a su proveedor de reconocimiento. El catálogo no guarda grabaciones ni consultas. Si el servicio no responde, escribe o usa el dictado del dispositivo en el campo de búsqueda.</p></details></section><div class="inline-actions"><button data-continue>Continuar donde quedé</button><a href="#home-topics">Explorar temas disponibles</a></div><details class="home-topics"><summary id="home-topics">Temas disponibles</summary><ol class="topic-list">${topics.map(t=>`<li><h3><a href="#${t.id}--tema">${t.number}. ${t.title}</a></h3>${t.description ? `<p>${t.description}</p>` : ''}</li>`).join('')}</ol></details><p>También puedes usar el temario por unidades. Esta versión permite revisar el temario. La primera ficha incluye una lección de muestra. Los materiales restantes se incorporarán por apartado.</p><a href="#ayuda">Ayuda para utilizar el curso</a></article>`;

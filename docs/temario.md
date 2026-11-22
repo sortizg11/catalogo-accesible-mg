@@ -1,6 +1,6 @@
 # Temario para revisión
 
-Matemática General (MA0101). Fuente docente: *Programa MA0101 Matemática General, I semestre de 2026*, sección 4, páginas 5–7. Cada enlace lleva a una ficha del catálogo con teoría, ejemplos resueltos, práctica y soluciones pendientes de incorporación. Se conservan el orden y la agrupación del programa, incluida la ubicación de los apartados 2.16 a 2.20 bajo Funciones racionales.
+Matemática General (MA0101). Fuente docente: *Programa MA0101 Matemática General, I semestre de 2026*, sección 4, páginas 5–7. Cada enlace lleva a una ficha del catálogo con teoría, ejemplos resueltos, práctica y soluciones. El apartado 1.1 incluye una lección de muestra de elaboración propia basada en el alcance del programa. Las otras fichas están pendientes de materiales. Se conservan el orden y la agrupación del programa, incluida la ubicación de los apartados 2.16 a 2.20 bajo Funciones racionales.
 
 ## Unidad 1. Funciones
 

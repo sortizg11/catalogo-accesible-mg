@@ -4,7 +4,7 @@ Catálogo de estudio de Matemática General (MA0101). El esqueleto usa la interf
 
 ## Revisar el catálogo
 
-Ejecuta `node scripts/serve.mjs` desde esta carpeta y abre [el catálogo local](http://127.0.0.1:4173/). También puedes consultar el [temario de revisión](docs/temario.md) o abrir el [manual de usuario](docs/manual-usuario.html).
+[Abrir el catálogo publicado](https://sortizg11.github.io/catalogo-accesible-mg/). Para revisarlo localmente, ejecuta `node scripts/serve.mjs` desde esta carpeta y abre [el catálogo local](http://127.0.0.1:4173/). También puedes consultar el [temario de revisión](docs/temario.md) o abrir el [manual de usuario](docs/manual-usuario.html).
 
 | Unidad | Apartados |
 | --- | ---: |
@@ -13,7 +13,7 @@ Ejecuta `node scripts/serve.mjs` desde esta carpeta y abre [el catálogo local](
 | 3. Funciones exponenciales y logarítmicas | 5 |
 | 4. Funciones trigonométricas | 11 |
 
-Cada apartado tiene un enlace estable y secciones para teoría, ejemplos resueltos, práctica y soluciones. Esta entrega prepara esas secciones para recibir los archivos docentes.
+Cada apartado tiene un enlace estable y secciones para teoría, ejemplos resueltos, práctica y soluciones. El apartado 1.1 incluye una lección de muestra elaborada para probar la estructura. Las otras 52 fichas quedan pendientes de materiales docentes.
 
 ## Incorporar materiales
 
